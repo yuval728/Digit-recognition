@@ -5,7 +5,8 @@ import numpy as np
 import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 from PIL import Image
-import cv2, numpy as np
+import cv2
+import numpy as np
 from compress import decompress_pickle
 
 st.title('Digit Recognizer')
