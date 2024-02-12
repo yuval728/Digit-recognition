@@ -6,6 +6,7 @@ import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 from PIL import Image
 import cv2, numpy as np
+from compress import decompress_pickle
 
 st.title('Digit Recognizer')
 
@@ -42,7 +43,7 @@ def draw_grid():
     return img
 
 def select_model():
-    models={"Logistic Regression": "lr.pkl", "Decision Tree": "dt.pkl", "Support Vector Machine": "svc.pkl", "K-Nearest Neighbors": "knn.pkl", "Random Forest": "random_forest.pkl", "MLP": "mlp.pkl"}
+    models={"Logistic Regression": "lr.pbz2", "Decision Tree": "dt.pbz2", "Support Vector Machine": "svc.pbz2", "K-Nearest Neighbors": "knn.pbz2", "Random Forest": "random_forest.pbz2", "MLP": "mlp.pbz2"}
     model_selection = st.sidebar.selectbox("Select Model", list(models.keys()))
     
     return models[model_selection]
@@ -61,7 +62,7 @@ if st.button('Predict'):
         # print(img)
 
         if os.path.isfile(model): 
-            loaded_model = pickle.load(open(model, 'rb'))
+            loaded_model = decompress_pickle(model)
             prediction = loaded_model.predict([img])
             st.write("Prediction: ", prediction)
         else:
