@@ -1,0 +1,8 @@
+streamlit
+pandas
+numpy
+scikit-learn
+streamlit_drawable_canvas
+bz2file
+Pillow
+cv2
