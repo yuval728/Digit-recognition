@@ -2,7 +2,7 @@ streamlit
 pandas
 numpy
 scikit-learn
-streamlit_drawable_canvas
+streamlit-drawable-canvas
 bz2file
 Pillow
 cv2
