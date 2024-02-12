@@ -6,3 +6,4 @@ streamlit-drawable-canvas
 bz2file
 Pillow
 opencv-python
+PyOpenG
