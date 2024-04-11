@@ -11,7 +11,7 @@ def decompress_pickle(filename):
     
 #existing model
 if __name__ == '__main__':
-    for i in ['dt', 'lr', 'mlp', 'knn', 'svc']:
+    for i in ['dt', 'lr', 'mlp', 'knn', 'svc', 'rf']:
         compress_pickle(f'model/{i}.pbz2', pickle.load(open(f'oldmodel/{i}.pkl', 'rb')))
 
   

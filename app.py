@@ -44,7 +44,7 @@ def draw_grid():
     return img
 
 def select_model():
-    models={"Logistic Regression": "lr.pbz2", "Decision Tree": "dt.pbz2", "Support Vector Machine": "svc.pbz2", "K-Nearest Neighbors": "knn.pbz2", "Random Forest": "random_forest.pbz2", "MLP": "mlp.pbz2"}
+    models={"Logistic Regression": "lr.pbz2", "Decision Tree": "dt.pbz2", "Support Vector Machine": "svc.pbz2", "K-Nearest Neighbors": "knn.pbz2", "Random Forest": "rf.pbz2", "MLP": "mlp.pbz2"}
     model_selection = st.sidebar.selectbox("Select Model", list(models.keys()))
     
     return models[model_selection]
